@@ -35,17 +35,17 @@ body {
   margin: 0;
 }
 
-section{
+section {
   margin: 8rem auto;
 }
 
-.background-shape div{
+.background-shape div {
   content: "";
   display: inline-block;
   position: absolute;
-  overflow:hidden;
+  overflow: hidden;
   background-color: darkcyan;
-  transform: translate(0,calc(-100% + 60vw)) skew(0,-30deg);
+  transform: translate(0, calc(-100% + 60vw)) skew(0, -30deg);
   width: 100vw;
   height: 200vh;
 }
@@ -70,74 +70,79 @@ section{
   text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
 }
 
-#about > p, #about > h1, #about > .links{
+#about > .content {
   grid-column: span 3;
 }
 
-#about > .links, #about > img{
+#about > img {
   width: 100%;
 }
 
-#about > img, #about > h2{
+#about > img,
+#about > h2 {
   grid-area: 1 / 2 / 2 / 3;
 }
 
-p{
+#about > .background {
+  display: none;
+}
+
+p {
   padding: 1rem;
 }
 
-a{
+a {
   text-decoration: none;
 }
-.links{
- display: flex;
- align-items: center;
- justify-content: space-evenly;
- max-width: 20rem;
- margin: auto;
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 20rem;
+  margin: auto;
 }
 
-.link-icon{
+.link-icon {
   font-size: 3rem;
   width: 3rem;
   height: 3rem;
 }
-img.link-icon{
+img.link-icon {
   transform: translate(0, 3px);
   filter: invert(20%);
 }
 
-.work-card{
+.work-card {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
   margin: 4rem 2rem;
   min-height: 120vw;
 }
 
-.title-row{
+.title-row {
   display: flex;
   padding: 1rem;
   align-items: center;
 }
 
-.title-row .link-icon{
+.title-row .link-icon {
   font-size: 2rem;
   width: 2rem;
   height: 2rem;
 }
 
-.title-row > h2{
+.title-row > h2 {
   margin: 0 auto 0 1rem;
 }
-.title-row > a{
+.title-row > a {
   margin: 0 1rem;
 }
 
-.work-card p{
+.work-card p {
   font-size: 1.2rem;
   margin: 0;
 }
 
-.image-placeholder{
+.image-placeholder {
   width: 100%;
   height: 60vw;
   display: flex;
@@ -145,50 +150,50 @@ img.link-icon{
   justify-content: center;
 }
 
-.image-placeholder > h1{
+.image-placeholder > h1 {
   font-size: 3rem;
   color: white;
 }
 
-.work-card:nth-of-type(1) .image-placeholder{
+.work-card:nth-of-type(1) .image-placeholder {
   background-color: #515adb;
 }
-.work-card:nth-of-type(2) .image-placeholder{
+.work-card:nth-of-type(2) .image-placeholder {
   background-color: #db9f51;
 }
-.work-card:nth-of-type(3) .image-placeholder{
+.work-card:nth-of-type(3) .image-placeholder {
   background-color: #51db63;
 }
-.work-card:nth-of-type(4) .image-placeholder{
+.work-card:nth-of-type(4) .image-placeholder {
   background-color: #d651db;
 }
-.work-card:nth-of-type(5) .image-placeholder{
+.work-card:nth-of-type(5) .image-placeholder {
   background-color: #51bbdb;
 }
-.work-card:nth-of-type(6) .image-placeholder{
+.work-card:nth-of-type(6) .image-placeholder {
   background-color: #db5151;
 }
 
-#contact{
+#contact {
   background-color: darkcyan;
   padding: 1.5rem 1rem;
   margin-bottom: 0;
 }
 
-#contact *{
+#contact * {
   color: white;
 }
 
-#contact h1{
+#contact h1 {
   color: white;
   margin: 0;
 }
 
-#contact> p{
+#contact > p {
   font-size: 2em;
 }
 
-.small-text{
+.small-text {
   margin: 1rem;
 }
 
@@ -197,17 +202,51 @@ img.link-icon{
   margin: 0;
 }
 
-#contact .links{
+#contact .links {
   margin: 2rem auto;
 }
 
-footer img{
+footer img {
   width: 100%;
   object-fit: cover;
 }
 
-@media (max-width: 600px) {
-  #about{
+@media (min-width: 600px) {
+  #about {
+    grid: 6rem auto auto auto auto / 2rem 2fr 3rem 4fr;
+    padding: 2rem;
+  }
 
+  #about > .background {
+    grid-area: 2 / 2 / 5/ 4;
+    display: block;
+    background-color: white;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  #about > h1 {
+    grid-area: 2 / 3 / 4/ 5;
+  }
+
+  #about > p {
+    grid-area: 3 / 2 / 6/ 5;
+  }
+
+  #about > img {
+    display: inline;
+    float: left;
+    grid-area: 1 / 1 / 4/ 4;
+    z-index: 1;
+    shape-outside: border-box;
+  }
+
+  #about > h2 {
+    grid-area: 1 / 1 / 2 / 4;
+    display: inline;
+    z-index: 2;
+  }
+
+  #about > .links{
+    display: none;
   }
 }
