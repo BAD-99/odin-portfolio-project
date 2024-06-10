@@ -175,7 +175,8 @@ img.link-icon {
 
 #contact {
   background-color: darkcyan;
-  padding: 1.5rem 1rem;
+  /* padding: 1.5rem 1rem; */
+  padding-top: 1.5rem;
   margin-bottom: 0;
   & * {
     color: white;
@@ -201,11 +202,10 @@ img.link-icon {
   & .links {
     margin: 2rem auto;
   }
-}
-
-footer img {
-  width: 100%;
-  object-fit: cover;
+  & img {
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 @media (min-width: 600px) {
@@ -296,4 +296,29 @@ footer img {
       }
     }
   }
+
+  #contact{
+    display: flex;
+    padding: 1.5rem;
+    & h1{
+      text-align: left;
+      padding: 1rem;
+    }
+    & p{
+      font-size: 1.2rem;
+      margin-right: 15vw;
+    }
+    & img{
+      width: 30vw;
+    }
+    & .links{
+      margin: 2rem 1rem;
+      max-width: 14rem;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: 1000px){
+  
 }
