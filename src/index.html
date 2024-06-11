@@ -34,7 +34,12 @@
           <div></div>
         </div>
         <section id="about">
-            <img src="../assets/main-pic.jpg" alt="" />
+            <img 
+            srcset="../assets/main-pic480.jpg 480w, ../assets/main-pic300.jpg 300w"
+            sizes="480px, 300px"
+            src="../assets/main-pic300.jpg" 
+            alt="" 
+            />
             <h2>Ashley Williams</h1>
                 <div class="content">
                     <div class="border"></div>
@@ -191,7 +196,12 @@
               </div>
               </div>
           </div>
-          <img src="../assets/second-pic.jpg" alt="">
+          <!-- <img src="../assets/second-pic-normal.jpg" alt=""> -->
+          <picture>
+            <source media="(min-width: 1000px)" srcset="../assets/second-pic-normal.jpg">
+            <source media="(min-width: 700px) and (max-width: 999px)" srcset="../assets/second-pic-tablet.jpg">
+            <img src="../assets/second-pic-normal.jpg" alt="">
+          </picture>
         </section>
     </main>
   </body>
